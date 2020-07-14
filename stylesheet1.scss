@@ -1,0 +1,170 @@
+$headerColor: #2E86C1;
+$sub-headerColor: #3498DB;
+$backgroundColor: #CACFD2;
+$listColor: #2980B9;
+$introColor: #21618C;
+$font-family: Arial, Helvetica, sans-serif;
+
+@media (max-width: 499px){
+    #homepage-photo{
+        display: none;
+    }
+}
+
+
+%headerStyle{
+    font-family: $font-family;
+    font-weight: bold;
+    padding: 10px;
+    margin-left: 5px;
+    width: 250px;
+    border-radius: 25px;
+    font-size: xxx-large;
+    background-color: $backgroundColor;
+}
+
+#header{
+    @extend %headerStyle;
+    color: $headerColor;
+    margin-top:10px;
+}
+
+#sub-header{
+    @extend %headerStyle;
+    color: $sub-headerColor;
+    font-size: smaller;
+    padding: 0px;
+    margin-left: 0px;
+    width: 230px;
+}
+
+.title{
+    @extend %headerStyle;
+    color: $headerColor;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+
+%basic{
+  font-family: $font-family;
+  font-size: 16px;
+  padding: 12px;
+  margin-top: 10px;
+  width: 720px;
+  background-color: $backgroundColor;
+}
+
+#arthursSeat-facts{
+    @extend %basic;
+    color: $listColor;
+    width: 750px;
+    li {
+        margin-left: 5px;
+    }
+}
+
+
+.description{
+    @extend %basic;
+    color: $introColor;
+    margin-top: 50px;
+}
+
+#intro{
+    @extend %basic;
+    color: $introColor;
+    margin-left: 10px;
+    margin-top: 50px;
+}
+
+.intro-link{
+    font-family: Georgia, Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+#button{
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin-top: 20px;
+    margin-left: 5px;
+    background-color: $introColor;
+    ul{
+        text-align: center;
+        display: inline-flex;
+        list-style: none;
+        margin-top: 10px;
+        li{
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        li:hover{
+            background-color: $sub-headerColor;
+        }
+    }
+    &:hover{
+        border-radius: 15px;
+        width: 750px;
+    }
+}
+
+.fa-home{
+    color: white;
+    size: 60px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.active a{
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    display: none;
+}
+
+#button:hover .active a{
+    display:inline-flex;
+}
+
+body{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/05/Princes_Street_Gardens.jpg);
+    background-size: cover;
+}
+
+table{
+    background-color: $backgroundColor;
+    color: $introColor;
+    width: 745px;
+    height: 250px;
+    font-family: $font-family;
+    margin-left: 10px;
+    border-collapse: collapse;
+    tr{
+        margin-top: 10px auto;
+        text-align: center;
+        vertical-align: middle;
+        .empty{
+            border: none;
+        }
+        td, .in-table{
+            border: 3px solid $introColor;
+            text-align: middle;
+        }
+      }
+}
+
+div img{
+    border: 3px solid $introColor;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: 10px;
+    display: inline-flex;
+}
+
+#pictureColumn{
+    display: inline-flex;
+    margin-top: 50px;
+}
